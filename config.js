@@ -1,1 +1,1 @@
-export const REPO_NAME = '/hw5-username'
+export const REPO_NAME = '/html-hw7-username'

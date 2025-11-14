@@ -10,7 +10,7 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:3030',
     trace: 'on',
-    screenshot: 'on' 
+    screenshot: 'on'
   },
   projects: [
     {
@@ -18,5 +18,11 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] }
     }
   ],
+  webServer: {
+    command: 'npx vite',
+    url: 'http://localhost:3030',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120 * 1000,
+  },
   snapshotPathTemplate: '{testDir}/__screenshots__/{testName}{ext}',
 })
