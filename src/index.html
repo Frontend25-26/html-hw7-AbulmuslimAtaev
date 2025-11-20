@@ -107,69 +107,49 @@
             <div class="skills-left">
                 <div class="skill-item">
                     <p class="skill-label">React</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 498.6px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="90" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">Angular</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 387.8px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="70" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">HTML + CSS</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 554px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="100" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">Javascript</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 110.8px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="20" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">Python</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 138.5px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="25" max="100"></progress>
                 </div>
             </div>
             <div class="skills-right">
                 <div class="skill-item">
                     <p class="skill-label">Soft skill</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 443.2px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="80" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">Motion graphics</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 332.4px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="60" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">UX</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 110.8px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="20" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">UI</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 277px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="50" max="100"></progress>
                 </div>
                 <div class="skill-item">
                     <p class="skill-label">3D</p>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 138.5px;"></div>
-                    </div>
+                    <progress class="skill-bar" value="25" max="100"></progress>
                 </div>
             </div>
         </div>
-        <div class="add-skill-form">
+        <form class="add-skill-form">
             <p class="form-title">Add new skill</p>
             <div class="form-inputs">
                 <div class="form-field">
@@ -180,35 +160,35 @@
                     <label class="form-label">Skill proficiency percentage, %</label>
                     <input type="text" class="form-input" />
                 </div>
-                <button class="form-button">Add</button>
+                <button type="button" class="form-button">Add</button>
             </div>
-        </div>
+        </form>
     </section>
     <section id="contacts">
         <h2 class="contacts-title">Contacts</h2>
-        <div class="contacts-content">
+        <address class="contacts-content">
             <div class="contact-card">
-                <img src="./img/address_logo.svg" width="40px" height="40px" alt="Address" class="contact-icon">
+                <img src="./img/address_logo.svg" width="40px" height="40px" alt="Address">
                 <div class="contact-info">
                     <p class="contact-label">Address</p>
                     <p class="contact-value">16 Lva Tolstogo str., Moscow</p>
                 </div>
             </div>
             <div class="contact-card">
-                <img src="./img/phone_logo.svg" width="40px" height="40px" alt="Phone" class="contact-icon">
+                <img src="./img/phone_logo.svg" width="40px" height="40px" alt="Phone">
                 <div class="contact-info">
                     <p class="contact-label">Phone</p>
-                    <p class="contact-value">+7 (000) 000 00 00</p>
+                    <a href="tel:+70000000000" class="contact-value">+7 (000) 000 00 00</a>
                 </div>
             </div>
             <div class="contact-card">
-                <img src="./img/email_logo.svg" width="40px" height="40px" alt="E-Mail" class="contact-icon">
+                <img src="./img/email_logo.svg" width="40px" height="40px" alt="E-Mail">
                 <div class="contact-info">
                     <p class="contact-label">E-Mail</p>
-                    <p class="contact-value">myemail@yandex.ru</p>
+                    <a href="mailto:myemail@yandex.ru" class="contact-value">myemail@yandex.ru</a>
                 </div>
             </div>
-        </div>
+        </address>
     </section>
     <footer id="footer">
         <div class="social-media">

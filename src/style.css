@@ -1,3 +1,11 @@
+:root {
+    --color-primary: rgb(54, 62, 69);
+    --color-secondary: rgba(54, 62, 69, 0.64);
+    --color-border: rgba(152, 163, 174, 0.48);
+    --color-background-gray: rgba(152, 163, 174, 0.12);
+    --color-button: rgb(47, 51, 55);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +15,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
+}
+
+img {
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .Content {
@@ -32,16 +45,14 @@ body {
 }
 
 .nav-button {
-    border: 1px solid rgba(152, 163, 174, 0.48);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 16px 20px;
     font-size: 14px;
     line-height: 16px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
     background-color: transparent;
-    font-family: Arial, sans-serif;
     text-decoration: none;
-    cursor: pointer;
 }
 
 #about {
@@ -54,7 +65,7 @@ body {
     font-size: 48px;
     line-height: 58px;
     font-weight: normal;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .about-image {
@@ -75,7 +86,7 @@ body {
     font-size: 48px;
     line-height: 48px;
     font-weight: normal;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .filter-buttons {
@@ -84,15 +95,13 @@ body {
 }
 
 .filter-button {
-    border: 1px solid rgba(152, 163, 174, 0.48);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 16px 20px;
     font-size: 14px;
     line-height: 16px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
     background-color: transparent;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
 }
 
 .experience-content {
@@ -116,25 +125,25 @@ body {
 .job-title {
     font-size: 20px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .job-location {
     font-size: 16px;
     line-height: 24px;
-    color: rgba(54, 62, 69, 0.64);
+    color: var(--color-secondary);
 }
 
 .job-period {
     font-size: 16px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .job-description {
     font-size: 16px;
     line-height: 24px;
-    color: rgba(54, 62, 69, 0.64);
+    color: var(--color-secondary);
 }
 
 .job-description p {
@@ -168,7 +177,7 @@ body {
 
 .copyright {
     font-size: 14px;
-    color: rgba(54, 62, 69, 0.64);
+    color: var(--color-secondary);
 }
 
 #education {
@@ -181,7 +190,7 @@ body {
     font-size: 48px;
     line-height: 48px;
     font-weight: normal;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .education-content {
@@ -211,19 +220,19 @@ body {
 .education-institution {
     font-size: 20px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .education-degree {
     font-size: 16px;
     line-height: 24px;
-    color: rgba(54, 62, 69, 0.64);
+    color: var(--color-secondary);
 }
 
 .education-period {
     font-size: 16px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 #skills {
@@ -236,12 +245,11 @@ body {
     font-size: 48px;
     line-height: 48px;
     font-weight: normal;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .skills-content {
     display: flex;
-    gap: 16px;
 }
 
 .skills-left,
@@ -251,38 +259,43 @@ body {
     flex-direction: column;
 }
 
-.skills-left {
-    margin-left: -16px;
-}
-
 .skill-item {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 16px;
+    padding: 16px 16px 16px 0;
 }
 
 .skill-label {
     font-size: 16px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .skill-bar {
     width: 554px;
     height: 8px;
-    background-color: rgba(152, 163, 174, 0.12);
+    appearance: none;
     border-radius: 4px;
 }
 
-.skill-progress {
-    height: 8px;
-    background-color: rgb(54, 62, 69);
+.skill-bar::-webkit-progress-bar {
+    background-color: var(--color-background-gray);
+    border-radius: 4px;
+}
+
+.skill-bar::-webkit-progress-value {
+    background-color: var(--color-primary);
+    border-radius: 4px;
+}
+
+.skill-bar::-moz-progress-bar {
+    background-color: var(--color-primary);
     border-radius: 4px;
 }
 
 .add-skill-form {
-    background-color: rgba(152, 163, 174, 0.12);
+    background-color: var(--color-background-gray);
     border-radius: 8px;
     padding: 32px;
     display: flex;
@@ -293,7 +306,7 @@ body {
 .form-title {
     font-size: 20px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .form-inputs {
@@ -312,30 +325,27 @@ body {
 .form-label {
     font-size: 16px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .form-input {
     height: 48px;
-    border: 1px solid rgba(156, 163, 170, 0.48);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 0 16px;
     font-size: 14px;
-    font-family: Arial, sans-serif;
     background-color: white;
 }
 
 .form-button {
     height: 48px;
     padding: 16px 20px;
-    background-color: rgb(47, 51, 55);
+    background-color: var(--color-button);
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 14px;
     line-height: 16px;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
 }
 
 #contacts {
@@ -348,17 +358,18 @@ body {
     font-size: 48px;
     line-height: 48px;
     font-weight: normal;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .contacts-content {
     display: flex;
     gap: 32px;
+    font-style: normal;
 }
 
 .contact-card {
     flex: 1;
-    background-color: rgba(152, 163, 174, 0.12);
+    background-color: var(--color-background-gray);
     border-radius: 8px;
     padding: 32px;
     height: 400px;
@@ -376,11 +387,16 @@ body {
 .contact-label {
     font-size: 20px;
     line-height: 24px;
-    color: rgb(54, 62, 69);
+    color: var(--color-primary);
 }
 
 .contact-value {
     font-size: 16px;
     line-height: 24px;
-    color: rgba(54, 62, 69, 0.64);
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a.contact-value:hover {
+    text-decoration: underline;
 }
